@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MapsClientActivity">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/btnSalir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:enabled="true"
+                android:onClick="salir"
+                android:text="Cerrar Sesion"
+                android:textColor="@android:color/black" />
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <Button
+                    android:id="@+id/botonon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/btnOn"
+                    android:enabled="true"
+                    android:onClick="on"
+                    android:text="Encencer"
+                    android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <fragment
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/map"
+          tools:context=".MapsClientActivity"
+          android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+</LinearLayout>
